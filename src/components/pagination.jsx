@@ -9,7 +9,7 @@ const Pagination = ({ itemsCount, pageSize, onPageChange, currentPage }) => {
   const pages = _.range(1, pagesCount + 1);
   return (
     <ul className="pagination">
-      {pages.map((page) => (
+      {pages.map(page => (
         <li
           className={classNames('page-item', { active: page === currentPage })}
           key={page}

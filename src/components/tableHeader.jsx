@@ -1,8 +1,8 @@
 import React from 'react';
 
-const TableHeader = (props) => {
+const TableHeader = props => {
   const { columns, onSort } = props;
-  const raiseSort = (path) => {
+  const raiseSort = path => {
     const sortColumn = { ...props.sortColumn };
     if (sortColumn.path === path) {
       sortColumn.order = sortColumn.order === 'asc' ? 'desc' : 'asc';
@@ -12,7 +12,7 @@ const TableHeader = (props) => {
     }
     onSort(sortColumn);
   };
-  const renderSortIcon = (column) => {
+  const renderSortIcon = column => {
     const { sortColumn } = props;
     if (column.path !== sortColumn.path) return null;
     if (sortColumn.order === 'asc') return <i className="fa fa-sort-asc" />;
@@ -21,7 +21,7 @@ const TableHeader = (props) => {
   return (
     <thead>
       <tr>
-        {columns.map((column) => (
+        {columns.map(column => (
           <th
             key={column.label || column.key}
             onClick={() => raiseSort(column.path)}

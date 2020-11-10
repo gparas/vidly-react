@@ -10,9 +10,9 @@ const TableBody = ({ rows, columns }) => {
   const createKey = (row, column) => row._id + (column.path || column.key);
   return (
     <tbody>
-      {rows.map((row) => (
+      {rows.map(row => (
         <tr key={row._id}>
-          {columns.map((column) => (
+          {columns.map(column => (
             <td key={createKey(row, column)}>{renderCell(row, column)}</td>
           ))}
         </tr>

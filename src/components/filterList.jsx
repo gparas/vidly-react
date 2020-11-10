@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 const FilterList = ({ items, onItemSelect, selectedItem }) => (
   <ul className="list-group">
-    {items.map((item) => (
+    {items.map(item => (
       <li
         onClick={() => onItemSelect(item)}
         key={item._id}
