@@ -15,6 +15,10 @@ const NavBar = () => {
       label: 'Rentals',
       path: '/rentals',
     },
+    {
+      label: 'Login',
+      path: '/login',
+    },
   ];
   return (
     <nav className="navbar navbar-expand-sm navbar-light bg-light mb-3">

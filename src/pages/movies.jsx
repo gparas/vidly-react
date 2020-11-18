@@ -3,9 +3,9 @@ import _ from 'lodash';
 import { paginate } from '../utils/paginate';
 import { getMovies } from '../services/fakeMovieService';
 import { getGenres } from '../services/fakeGenreService';
-import MoviesList from './moviesList';
-import FilterList from './filterList';
-import Pagination from './pagination';
+import MoviesList from '../components/moviesList';
+import FilterList from '../components/filterList';
+import Pagination from '../modules/pagination';
 
 class Movies extends Component {
   state = {

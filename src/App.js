@@ -2,13 +2,15 @@ import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.css';
-
-import Movies from './components/movies';
-import MovieForm from './components/movieForm';
-import Customers from './components/customers';
-import Rentals from './components/rentals';
-import NotFound from './components/notFound';
 import NavBar from './components/navBar';
+import {
+  Movies,
+  MovieForm,
+  Customers,
+  Rentals,
+  NotFound,
+  LoginForm,
+} from './pages';
 
 const App = () => {
   return (
@@ -16,6 +18,7 @@ const App = () => {
       <NavBar />
       <main className="container">
         <Switch>
+          <Route path="/login" component={LoginForm} />
           <Route path="/movies/:id" component={MovieForm} />
           <Route path="/movies" component={Movies} />
           <Route path="/customers" component={Customers} />

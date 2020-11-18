@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Like from './like';
-import Table from './table';
+import { Like, Table } from '../modules';
 
 const MoviesList = ({ movies, onLike, onDelete, onSort, sortColumn }) => {
   const columns = [
